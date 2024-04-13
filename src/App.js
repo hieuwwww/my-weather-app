@@ -39,16 +39,13 @@ function App() {
 
   return (
     <div className="app">
-      <div className="lebron">
-        <h1>
-          <img
-            src={require("./assets/default-icon.png")}
-            alt="Default Icon"
-            className="default-icon"
-          />
-        </h1>
-      </div>
-
+      <h1>
+        <img
+          src={require("./assets/default-icon.png")}
+          alt="Default Icon"
+          className="default-icon"
+        />
+      </h1>
       <h2> Weather Forecast</h2>
       <div className="weather-cards-container">
         {weatherData &&
