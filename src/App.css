@@ -14,6 +14,7 @@
 }
 
 .weather-cards-container {
+  background-color: rgb(158, 158, 158);
   display: flex;
   gap: 20px;
   overflow-x: auto; /* Tạo thanh trượt ngang khi cần thiết */
@@ -21,7 +22,61 @@
   max-width: 100%; /* Đảm bảo container không vượt quá kích thước của trang */
 }
 
-.weather-cards {
-  flex: 0 0 auto;
-  width: 200px;
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.weather-icon {
+  display: flex;
+  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+.weather-icon img {
+  width: 100px; /* Độ rộng của weather icon */
+  height: 100px; /* Độ cao của weather icon */
+}
+.weather-details {
+  margin-top: 10px;
+}
+.date-selector {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.date-selector button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px; 
+  width: 150px;   
+}
+.date-selector button.selected {
+  background-color: #0056b3;
+}
+
+.date-selector button:hover {
+  background-color: #0056b3;
+} 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
